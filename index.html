@@ -9,62 +9,121 @@
   <link rel="icon" href="images/favicon.ico">
   <style>
     body {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background: linear-gradient(to right, #00377a, #797b7f);
       color: white;
       font-family: 'Montserrat', sans-serif;
     }
-    .top-container {
-      position: relative;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    .logo {
+      width: 250px;
+    }
+    .contact-info {
+      display: flex;
+      align-items: center;
+    }
+    .contact-info p {
+      margin: 0 10px;
+    }
+    .contact-button {
+      background-color: #00377a; /* Changed color to #00377a */
+      color: white;
+      padding: 10px 20px;
       text-align: center;
-      padding: 50px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
     }
-    .top-container img {
-      width: 100px;
+    .top-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .title-text {
-      position: relative;
-      z-index: 1;
-    }
-    .top-cloud, .bottom-cloud {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .dynamic-content {
+      display: flex;
+      justify-content: space-between;
       width: 100%;
+      padding: 20px;
+    }
+    .dynamic-text {
+      flex: 1;
+      text-align: left;
+      padding-right: 20px;
+    }
+    .dynamic-image {
+      display: flex; /* Added flex display */
+      justify-content: space-between; /* Space between images */
+      align-items: center; /* Center align images */
+      padding-left: 9px;
+    }
+    .support-image {
+      max-width: 200px; /* Adjusted size */
       height: auto;
+      margin: 0 10px; /* Adjusted spacing */
     }
-    .bottom-cloud {
-      top: auto;
-      bottom: 0;
+    .support-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .mountain {
-      display: none;
+    .support-message {
+      flex: 1;
     }
-    .cloud-computing {
-      width: 100%;
-      height: auto;
+    .bottom-container {
+      display: flex;
+      flex-direction: column; /* Added to stack elements vertically */
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-link {
+      margin: 0 10px;
+    }
+    .phone-icon {
+      font-size: 24px;
+      color: white;
+      margin-right: 10px;
     }
   </style>
 </head>
 
 <body>
-  <div class="top-container">
-    <img class="top-cloud" src="images/cloud.png" alt="cloud">
-    <div class="title-text">
-      <h1>WillMachi</h1>
-      <h2>The <span class="IT">IT one</span>stop solutions.</h2>
+  <div class="header">
+    <img class="logo" src="images/wmachi1.png" alt="willmachi logo">
+    <div class="contact-info">
+      <a class="contact-button" href="mailto:willsononuoha@willmachi.com">CONTACT ME</a>
     </div>
-    <img class="bottom-cloud" src="images/cloud.png" alt="cloud">
-    <img class="cloud-computing" src="images/cloud-computing.png" alt="cloud computing image">
+  </div>
+
+  <div class="top-container">
+    <div class="dynamic-content">
+      <div class="dynamic-text">
+        <h2>Support</h2>
+        <p id="dynamic-message"></p>
+      </div>
+      <div class="dynamic-image">
+        <img class="support-image" src="images/Desktop-support.png" alt="desktop support">
+        <img class="support-image" src="images/office-network.png" alt="office network">
+        <img class="support-image" src="images/comput-network.png" alt="compute network">
+      </div>
+    </div>
   </div>
 
   <div class="middle-container">
-    <div class="profile">
-      <img src="images/willmachi.png" alt="willson profile picture">
-      <h2>Hello.</h2>
-      <p><em>Founder and CEO of <strong><a href="https://www.linkedin.com/in/willson-onuoha-15076a4a/
-      ?originalSubdomain=uk">WillMachi</a></strong></em></p>
-      <p class="About Me">As a passionate technology enthusiast, I thrive on the excitement of learning new skills and pushing boundaries. I believe in embracing challenges head-on and living life on the edge of innovation. My mantra is simple: "Go big or go home." This relentless drive fuels my commitment to delivering exceptional IT solutions and staying ahead of the curve.</p>
-    </div>
     <hr>
     <div class="skills">
       <h2>My Skills.</h2>
@@ -80,7 +139,8 @@
         <h3>Devops & Solutions architect</h3>
         <p>Over the years I have gained experience working as a System Administrator, Network Engineer, and Solutions
           Architect below are a non-exhaustive list of my skills
-        <li> Azure Devops </li>
+        <li> Azure Platform </li>
+        <li> AWS Platform </li>
         <li> Bash </li>
         <li> Github CI</li>
         <li> Gitlab CI </li>
@@ -89,6 +149,7 @@
         <li> Octopus CI/CD</li>
         <li> Python </li>
         <li> Network architecture </li>
+        <li> WIFI Administration </li>
         <li> Powershell </li>
         <li> Smart Home Automation </li>
         <li> Terraform </li>
@@ -102,17 +163,45 @@
       <h2>Get In Touch</h2>
       <h3>If you love to know how I can assist  </h3>
       <p class="contact-message">I am always open to exploring different ways in other to attain your goals</p>
-      <a class="btn" href="mailto:willsononuoha@willmachi.com">CONTACT ME</a>
     </div>
   </div>
 
 
   <div class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/in/willson-onuoha-15076a4a/?originalSubdomain=uk">LinkedIn</a>
-    <a class="footer-link" href="https://twitter.com/friendlywind1"><img src="images/twit.png" alt="Twitter logo" style="width:20px;height:20px;"></a>
-    <a class="footer-link" href="https://www.willmachi.com/">Website</a>
+    <div class="footer-links">
+      <a class="footer-link" href="aboutme.html">About Me</a>
+      <a class="footer-link" href="https://www.linkedin.com/in/willson-onuoha-15076a4a/?originalSubdomain=uk"><img src="images/linkedin1.png" alt="LinkedIn logo" style="width:20px;height:20px;"></a>
+      <a class="footer-link" href="https://twitter.com/friendlywind1"><img src="images/twit.png" alt="Twitter logo" style="width:20px;height:20px;"></a>
+      <a class="footer-link" href="https://www.willmachi.com/"><img src="images/www-logo.png" alt="website logo" style="width:20px;height:20px;"></a>
+      <a class="footer-link" href="tel:07932067487"><img id="telephone-icon" src="images/telephone.png" alt="Phone icon" style="width:20px;height:20px;cursor:pointer;"></a>
+    </div>
+    <div id="phone-number" style="display:none;color:white;">07932067487</div>
     <p class="copyright">© 2023 Willmachi solutions.</p>
   </div>
+
+  <script>
+    const messages = [
+      "We provide 24/7 support.",
+      "Contact us for any IT solutions.",
+      "Your satisfaction is our priority."
+    ];
+    let messageIndex = 0;
+    function changeMessage() {
+      document.getElementById("dynamic-message").innerText = messages[messageIndex];
+      messageIndex = (messageIndex + 1) % messages.length;
+    }
+    setInterval(changeMessage, 3000);
+    window.onload = changeMessage;
+
+    document.getElementById('telephone-icon').addEventListener('click', function() {
+      var phoneNumberDiv = document.getElementById('phone-number');
+      if (phoneNumberDiv.style.display === 'none') {
+        phoneNumberDiv.style.display = 'block';
+      } else {
+        phoneNumberDiv.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 
 </html>
