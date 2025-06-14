@@ -1,19 +1,113 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>My Hobbies</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <h3><a href="index.html">Home</a></h3>
-    <h1>My Hobbies</h1>
-    <ol>
-      <li>Reading</li>
-      <li>Travelling</li>
-      <li>Spending time with family</li>
-      <li>DIY</li>
-      <li><a href="https://www.motortrend.com/cars/mercedes-benz/g-class/?galleryimageid=59ab8b04-dbfa-4e2c-abd0-c3dd13fca23e">Cars</a></li>
-    </ol>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Hobbies | WillMachi</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">🌙</button>
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/wmachi1.png" alt="Willmachi Logo" class="nav-logo-img"></a>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="hobbies.html" class="active">Hobbies</a></li>
+        <li><a href="contact-me.html">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero-glass">
+      <div class="hero-animated-bg">
+        <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#7F5AF0" fill-opacity="0.18" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        </svg>
+      </div>
+      <div class="hero-logo-center">
+        <img src="images/wmachi1.png" alt="Willmachi Logo" class="hero-logo-img">
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Beyond IT: My Hobbies</h1>
+        <p class="hero-tagline">A technical mind thrives on curiosity, creativity, and balance.</p>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="card glass-card animate-fadein" style="margin-top:2rem;">
+      <h2>My Favourite Hobbies</h2>
+      <div class="hobbies-list">
+        <div class="hobby-card">
+          <img src="images/reading.png" alt="Reading" class="icon-large">
+          <h3>Reading</h3>
+          <p>Exploring technology, business, and science books to stay ahead in IT.</p>
+        </div>
+        <div class="hobby-card">
+          <img src="images/travel.png" alt="Travelling" class="icon-large">
+          <h3>Travelling</h3>
+          <p>Visiting tech hubs and conferences worldwide to learn and network.</p>
+        </div>
+        <div class="hobby-card">
+          <img src="images/family.png" alt="Family" class="icon-large">
+          <h3>Family Time</h3>
+          <p>Balancing work with quality time and fun activities with loved ones.</p>
+        </div>
+        <div class="hobby-card">
+          <img src="images/diy.png" alt="DIY" class="icon-large">
+          <h3>DIY Projects</h3>
+          <p>Building smart home gadgets and tinkering with electronics.</p>
+        </div>
+        <div class="hobby-card">
+          <img src="images/cars.png" alt="Cars" class="icon-large">
+          <h3>Cars</h3>
+          <p>Passionate about automotive technology and high-performance vehicles.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer glossy-footer">
+    <div class="footer-links">
+      <a href="aboutme.html">About</a>
+      <a href="contact-me.html">Contact</a>
+      <a href="https://twitter.com/friendlywind1" target="_blank"><img src="images/twit.png" alt="Twitter" class="footer-icon"></a>
+      <a href="https://www.linkedin.com/in/willson-onuoha-15076a4a/?originalSubdomain=uk" target="_blank"><img src="images/linkedin1.png" alt="LinkedIn" class="footer-icon"></a>
+    </div>
+    <form class="newsletter-form">
+      <label for="newsletter-email">Stay Updated:</label>
+      <input type="email" id="newsletter-email" placeholder="Your email">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="copyright">© 2025 WillMachi Solutions. All rights reserved.</p>
+  </footer>
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.getAttribute('data-theme') === 'light') {
+        html.removeAttribute('data-theme');
+        document.querySelector('.theme-toggle').textContent = '🌙';
+      } else {
+        html.setAttribute('data-theme', 'light');
+        document.querySelector('.theme-toggle').textContent = '☀️';
+      }
+    }
+    // Animate on scroll
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.animate-fadein, .animate-slidein');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+</body>
 </html>

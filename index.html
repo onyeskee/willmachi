@@ -1,212 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>WillMachi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WillMachi | IT Solutions</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
-  <link rel="icon" href="images/favicon.ico">
-  <style>
-    body {
-      background: linear-gradient(to right, #00377a, #797b7f);
-      color: white;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-    }
-    .logo {
-      width: 250px;
-    }
-    .contact-info {
-      display: flex;
-      align-items: center;
-    }
-    .contact-info p {
-      margin: 0 10px;
-    }
-    .contact-button {
-      background-color: #00377a; /* Changed color to #00377a */
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-    }
-    .top-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .dynamic-content {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 20px;
-    }
-    .dynamic-text {
-      flex: 1;
-      text-align: left;
-      padding-right: 20px;
-    }
-    .dynamic-image {
-      display: flex; /* Added flex display */
-      justify-content: space-between; /* Space between images */
-      align-items: center; /* Center align images */
-      padding-left: 9px;
-    }
-    .support-image {
-      max-width: 200px; /* Adjusted size */
-      height: auto;
-      margin: 0 10px; /* Adjusted spacing */
-    }
-    .support-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .support-message {
-      flex: 1;
-    }
-    .bottom-container {
-      display: flex;
-      flex-direction: column; /* Added to stack elements vertically */
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .footer-link {
-      margin: 0 10px;
-    }
-    .phone-icon {
-      font-size: 24px;
-      color: white;
-      margin-right: 10px;
-    }
-    .resized-image {
-      width: 25%; /* Make the image wider */
-      max-width: 800px; /* Set a maximum width */
-      height: auto;
-      filter: contrast(150%); /* Increase contrast */
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="header">
-    <img class="logo resized-image" src="images/wmachi1.png" alt="willmachi logo">
-    <div class="contact-info">
-      <a class="contact-button" href="mailto:willsononuoha@willmachi.com">CONTACT ME</a>
-    </div>
-  </div>
-
-  <div class="top-container">
-    <div class="dynamic-content">
-      <div class="dynamic-text">
-        <h2>Support</h2>
-        <p id="dynamic-message"></p>
+  <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">🌙</button>
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/wmachi1.png" alt="Willmachi Logo" class="nav-logo-img"></a>
       </div>
-      <div class="dynamic-image">
-        <img class="support-image" src="images/Desktop-support.png" alt="desktop support">
-        <img class="support-image" src="images/office-network.png" alt="office network">
-        <img class="support-image" src="images/comput-network.png" alt="compute network">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="contact-me.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Clean, Centered Hero Section -->
+    <section class="hero-glass"
+      style="min-height: 80vh; display: flex; align-items: center; justify-content: center; position: relative;">
+      <div class="hero-bg-svg"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;">
+        <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00C6FF" stop-opacity="0.18" />
+              <stop offset="100%" stop-color="#7F5AF0" stop-opacity="0.22" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#heroGrad)"
+            d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+          </path>
+        </svg>
       </div>
-    </div>
-  </div>
-
-  <div class="middle-container">
-    <hr>
-    <div class="skills">
-      <h2>My Skills.</h2>
-      <div class="skill-row">
-
-        <h3>Design & Development</h3>
-        <p>I started learning to code over 2 years ago because I wanted to automate any of my task.
-          Over time, I have gained a wealth of experience designing and developing mobile and web applications.</p>
-
+      <div class="hero-content"
+        style="z-index:1;max-width:600px;margin:auto;text-align:center;">
+        <h1 class="hero-title"
+          style="font-size:2.8rem;font-weight:900;letter-spacing:1px;">Empowering Your Digital Future</h1>
+        <p class="hero-tagline"
+          style="font-size:1.3rem;margin:1.5rem 0 2.5rem 0;">Next-Gen IT Solutions, Cloud, Security & Automation for
+          Ambitious Businesses</p>
+        <a href="#services" class="btn-hero" style="font-size:1.15rem;">Explore Our Services</a>
       </div>
-      <div class="skill-row">
-
-        <h3>Devops & Solutions architect</h3>
-        <p>Over the years I have gained experience working as a System Administrator, Network Engineer, and Solutions
-          Architect below are a non-exhaustive list of my skills
-        <li> Azure Platform </li>
-        <li> AWS Platform </li>
-        <li> Bash </li>
-        <li> Github CI</li>
-        <li> Gitlab CI </li>
-        <li> Jenkins </li>
-        <li> Linux Operating System Administration </li>
-        <li> Octopus CI/CD</li>
-        <li> Python </li>
-        <li> Network architecture </li>
-        <li> WIFI Administration </li>
-        <li> Powershell </li>
-        <li> Smart Home Automation </li>
-        <li> Terraform </li>
-        <li> Windows Desktop and Server Administration </li>
-        </p>
-
+    </section>
+  </header>
+  <main>
+    <section id="services" class="animate-fadein"
+      style="margin-top:3rem; padding:0; background:none; box-shadow:none; border-radius:0;">
+      <h2 style="font-size:2.1rem; color:#fff; text-align:center; margin-bottom:2.5rem;">Our Expertise</h2>
+      <div class="tech-highlights"
+        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:3.5rem 2.5rem;margin-top:2.5rem;align-items:start;">
+        <div class="tech-card"
+          style="display:flex;flex-direction:column;align-items:center;">
+          <img src="images/cloudcomp.png" alt="Cloud" class="icon-large"
+            style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;">
+          <h3 style="text-align:center; margin:0.7rem 0 0.5rem 0;">Cloud Solutions</h3>
+          <p style="text-align:center; margin:0;">Azure, AWS, DevOps, CI/CD, Automation</p>
+        </div>
+        <div class="tech-card"
+          style="display:flex;flex-direction:column;align-items:center;">
+          <img src="images/office-network.png" alt="Network" class="icon-large"
+            style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;">
+          <h3 style="text-align:center; margin:0.7rem 0 0.5rem 0;">Network & Security</h3>
+          <p style="text-align:center; margin:0;">Enterprise Networking, Security, Smart Home, WiFi, Firewalls</p>
+        </div>
+        <div class="tech-card"
+          style="display:flex;flex-direction:column;align-items:center;">
+          <img src="images/Desktop-support.png" alt="Support" class="icon-large"
+            style="width:80px;height:80px;object-fit:contain;margin-bottom:1.5rem;">
+          <h3 style="text-align:center; margin:0.7rem 0 0.5rem 0;">IT Support</h3>
+          <p style="text-align:center; margin:0;">24/7 Support, Automation, Monitoring, Troubleshooting</p>
+        </div>
       </div>
-    </div>
-    <hr>
-    <div class="contact-me">
-      <h2>Get In Touch</h2>
-      <h3>If you love to know how I can assist  </h3>
-      <p class="contact-message">I am always open to exploring different ways in other to attain your goals</p>
-    </div>
-  </div>
-
-
-  <div class="bottom-container">
+    </section>
+    <section class="card glass-card animate-slidein" style="margin-top:2.5rem;">
+      <h2 style="font-size:2rem;">Why Choose WillMachi?</h2>
+      <ul class="about-highlights"
+        style="list-style:none;padding:0;margin:2rem 0 0 0;display:flex;flex-direction:column;gap:1.2rem;align-items:center;">
+        <li style="display:flex;align-items:center;gap:0.7rem;"><span
+            style="color:var(--accent);font-size:1.5rem;">✔</span> Proven expertise in modern IT and cloud
+          technologies</li>
+        <li style="display:flex;align-items:center;gap:0.7rem;"><span
+            style="color:var(--accent);font-size:1.5rem;">✔</span> Client-focused, transparent, and reliable
+        </li>
+        <li style="display:flex;align-items:center;gap:0.7rem;"><span
+            style="color:var(--accent);font-size:1.5rem;">✔</span> Innovative solutions tailored to your
+          business</li>
+      </ul>
+    </section>
+    <section class="testimonials-section animate-fadein" style="margin-top:2.5rem;">
+      <h3 style="font-size:1.3rem;">Client Success Stories</h3>
+      <div class="testimonials-list" id="testimonial-slider"
+        style="display:flex;gap:2rem;justify-content:center;align-items:stretch;flex-wrap:wrap;">
+        <div class="testimonial glass-card"
+          style="max-width:340px;min-width:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <img src="images/avatar1.png" alt="Client 1"
+            style="width:48px;height:48px;border-radius:50%;margin-bottom:0.7rem;">
+          <p style="font-style:italic;">“WillMachi’s team delivered seamless cloud migration and automation for our
+            business.”</p>
+          <span style="font-size:0.98rem;color:var(--accent);font-weight:600;">- CTO, FinTech</span>
+        </div>
+        <div class="testimonial glass-card"
+          style="max-width:340px;min-width:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <img src="images/avatar2.png" alt="Client 2"
+            style="width:48px;height:48px;border-radius:50%;margin-bottom:0.7rem;">
+          <p style="font-style:italic;">“Professional, responsive, and always ahead of the curve.”</p>
+          <span style="font-size:0.98rem;color:var(--accent);font-weight:600;">- IT Manager, Enterprise</span>
+        </div>
+        <div class="testimonial glass-card"
+          style="max-width:340px;min-width:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <img src="images/avatar3.png" alt="Client 3"
+            style="width:48px;height:48px;border-radius:50%;margin-bottom:0.7rem;">
+          <p style="font-style:italic;">“Their support and technical know-how are unmatched.”</p>
+          <span style="font-size:0.98rem;color:var(--accent);font-weight:600;">- Startup Founder</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer glossy-footer">
     <div class="footer-links">
-      <a class="footer-link" href="aboutme.html">About Me</a>
-      <a class="footer-link" href="https://www.linkedin.com/in/willson-onuoha-15076a4a/?originalSubdomain=uk"><img src="images/linkedin1.png" alt="LinkedIn logo" style="width:20px;height:20px;"></a>
-      <a class="footer-link" href="https://twitter.com/friendlywind1"><img src="images/twit.png" alt="Twitter logo" style="width:20px;height:20px;"></a>
-      <a class="footer-link" href="https://www.willmachi.com/"><img src="images/www-logo.png" alt="website logo" style="width:20px;height:20px;"></a>
-      <a class="footer-link" href="tel:07932067487"><img id="telephone-icon" src="images/telephone.png" alt="Phone icon" style="width:20px;height:20px;cursor:pointer;"></a>
+      <a href="aboutme.html">About</a>
+      <a href="contact-me.html">Contact</a>
+      <a href="https://twitter.com/friendlywind1" target="_blank"><img src="images/twit.png" alt="Twitter"
+          class="footer-icon"></a>
+      <a href="https://www.linkedin.com/in/willson-onuoha-15076a4a/?originalSubdomain=uk" target="_blank"><img
+          src="images/linkedin1.png" alt="LinkedIn" class="footer-icon"></a>
     </div>
-    <div id="phone-number" style="display:none;color:white;">07932067487</div>
-    <p class="copyright">© 2023 Willmachi solutions.</p>
-  </div>
-
+    <form class="newsletter-form">
+      <label for="newsletter-email">Stay Updated:</label>
+      <input type="email" id="newsletter-email" placeholder="Your email">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="copyright">© 2025 WillMachi Solutions. All rights reserved.</p>
+  </footer>
   <script>
-    const messages = [
-      "We provide 24/7 support.",
-      "Contact us for any IT solutions.",
-      "Your satisfaction is our priority."
-    ];
-    let messageIndex = 0;
-    function changeMessage() {
-      document.getElementById("dynamic-message").innerText = messages[messageIndex];
-      messageIndex = (messageIndex + 1) % messages.length;
-    }
-    setInterval(changeMessage, 3000);
-    window.onload = changeMessage;
-
-    document.getElementById('telephone-icon').addEventListener('click', function() {
-      var phoneNumberDiv = document.getElementById('phone-number');
-      if (phoneNumberDiv.style.display === 'none') {
-        phoneNumberDiv.style.display = 'block';
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.getAttribute('data-theme') === 'light') {
+        html.removeAttribute('data-theme');
+        document.querySelector('.theme-toggle').textContent = '🌙';
       } else {
-        phoneNumberDiv.style.display = 'none';
+        html.setAttribute('data-theme', 'light');
+        document.querySelector('.theme-toggle').textContent = '☀️';
       }
-    });
+    }
+    // Animate on scroll
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.animate-fadein, .animate-slidein');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
   </script>
 </body>
 
