@@ -3,19 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Input Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <form class="" action="index.html" method="post">
-      <input type="search" id="site-search" name="Search-Site">
-      <p><input type="text" name="" value=""></p>
-      <input type="reset" name="" value="Reset">
-      <p><button>Submit</button></p>
-      <input type="file" name="" accept="image/png, application/pdf, image/jpeg">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/wmachi1.png" alt="Willmachi Logo" class="nav-logo-img"></a>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="contact-me.html">Contact</a></li>
+      </ul>
+    </nav>
+    <form action="index.html" method="post">
+      <input type="search" id="site-search" name="Search-Site" placeholder="Search site">
+      <p><input type="text" name="" placeholder="Enter text"></p>
+      <input type="reset" value="Reset">
+      <p><button type="submit">Submit</button></p>
+      <input type="file" accept="image/png, application/pdf, image/jpeg">
       <p><label for="start">Start Date:</label></p>
       <p><input type="date" id="start" name="Select Date"></p>
-      <p><input type="radio" name="" value=""></p>
-      <p><input type="range" name="" value=""></p>
+      <p><input type="radio" name="option" value="option1"> Option 1</p>
+      <p><input type="range" name="range" min="0" max="100"></p>
     </form>
 
 

@@ -1,28 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>My Contact Information</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <h3><a href="index.html">Home</a></h3>
-    <h1>Contact Me</h1>
-    <ul>
-      <li>Mobile:- 07932067487</li>
-      <li>Twitter:- <a href="https://twitter.com/friendlywind1"><img src="images/twit.png" alt="Twitter logo" style="width:20px;height:20px;"></a></li>
-      <li>Instagram:- <a href="https://www.instagram.com/onyeskee/">onyeskee</a></li>
-      <li>Email:- willsononuoha@willmachi.com </li>
-    </ul>
-    <hr>
-    <form action="mailto:willsononuoha@willmachi.com" method="post" enctype="text/plain">
-      <label>Your Name</label>
-      <input type="text" name="yourName" value=""><br>
-      <label>Your Email</label>
-      <input type="email" name="yourEmail" value=""><br>
-      <label>Your Message</label><br>
-      <textarea name="yourMessage" rows="10" cols="30"></textarea><br>
-      <input type="submit" name="">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | WillMachi</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">🌙</button>
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/wmachi1.png" alt="Willmachi Logo" class="nav-logo-img"></a>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="contact-me.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="card glass-card animate-fadein" style="max-width:520px;margin:3rem auto 2rem auto;padding:2.5rem 2rem 2rem 2rem;background:#fff;color:#002147;box-shadow:0 4px 24px rgba(0,0,0,0.10);border-radius:18px;">
+      <h1 style="text-align:center;font-size:2.2rem;font-weight:900;margin-bottom:1.2rem;color:#002147;">Contact Me</h1>
+      <p class="contact-intro" style="text-align:center;font-size:1.1rem;margin-bottom:2rem;color:#222;">Let's connect! Fill out the form below and I'll get back to you soon.</p>
+      <form class="contact-form" action="mailto:willsononuoha@willmachi.com" method="post" enctype="text/plain" autocomplete="on" style="display:flex;flex-direction:column;gap:1.2rem;">
+        <div class="form-group" style="display:flex;flex-direction:column;align-items:flex-start;">
+          <label for="name" style="font-weight:700;color:#002147;margin-bottom:0.4rem;">Your Name</label>
+          <input type="text" id="name" name="yourName" required placeholder="Enter your name" style="width:100%;padding:0.7rem;border:1px solid #b3c6e0;border-radius:6px;font-size:1rem;background:#f8fafc;color:#222;">
+        </div>
+        <div class="form-group" style="display:flex;flex-direction:column;align-items:flex-start;">
+          <label for="email" style="font-weight:700;color:#002147;margin-bottom:0.4rem;">Your Email</label>
+          <input type="email" id="email" name="yourEmail" required placeholder="Enter your email" style="width:100%;padding:0.7rem;border:1px solid #b3c6e0;border-radius:6px;font-size:1rem;background:#f8fafc;color:#222;">
+        </div>
+        <div class="form-group" style="display:flex;flex-direction:column;align-items:flex-start;">
+          <label for="message" style="font-weight:700;color:#002147;margin-bottom:0.4rem;">Your Message</label>
+          <textarea id="message" name="yourMessage" rows="6" required placeholder="Type your message..." style="width:100%;padding:0.7rem;border:1px solid #b3c6e0;border-radius:6px;font-size:1rem;background:#f8fafc;color:#222;"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="margin-top:0.5rem;">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer glossy-footer">
+    <div class="footer-links">
+      <a href="aboutme.html">About</a>
+      <a href="contact-me.html">Contact</a>
+      <a href="https://twitter.com/friendlywind1" target="_blank"><img src="images/twit.png" alt="Twitter" class="footer-icon"></a>
+      <a href="https://www.linkedin.com/in/willson-onuoha-15076a4a/?originalSubdomain=uk" target="_blank"><img src="images/linkedin1.png" alt="LinkedIn" class="footer-icon"></a>
+      <a href="tel:07932067487"><img src="images/telephone.png" alt="Phone" class="footer-icon"></a>
+      <a href="https://www.willmachi.com/" target="_blank"><img src="images/www-logo.png" alt="Website" class="footer-icon"></a>
+    </div>
+    <form class="newsletter-form">
+      <label for="newsletter-email">Stay Updated:</label>
+      <input type="email" id="newsletter-email" placeholder="Your email">
+      <button type="submit">Subscribe</button>
     </form>
-  </body>
+    <p class="copyright">© 2025 WillMachi Solutions. All rights reserved.</p>
+  </footer>
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.getAttribute('data-theme') === 'light') {
+        html.removeAttribute('data-theme');
+        document.querySelector('.theme-toggle').textContent = '🌙';
+      } else {
+        html.setAttribute('data-theme', 'light');
+        document.querySelector('.theme-toggle').textContent = '☀️';
+      }
+    }
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.animate-fadein, .animate-slidein');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+</body>
 </html>
